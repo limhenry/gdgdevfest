@@ -2,371 +2,466 @@
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <dom-module id="my-register">
     <style>
-    h1 {
-        font-weight: 200;
-        font-size: 42px;
-        position: absolute;
-        bottom: 64px;
-        color: white;
-    }
-    #header {
-        position: relative;
-        height: 220px;
-    }
-    paper-card {
-        margin: 12px;
-        top: -108px;
-        max-width: 860px;
-        padding: 8px;
-    }
-    paper-card.card-content {
-        padding: 16px 22px;
-    }
-    paper-card.paper-card-0 .card-content {
-        min-width: 760px;
-    }
-    #register-card {
-        background-color: #F2F2F2;
-        padding: 26px 16px;
-    }
-    paper-radio-button {
-        display: block;
-    }
-    paper-radio-button.my-register {
-        padding: 12px;
-    }
-    @media screen and (max-width: 860px) {
-        paper-card.paper-card-0 .card-content {
-            min-width: 620px;
+        h1 {
+            font-weight: 200;
+            font-size: 42px;
+            position: absolute;
+            bottom: 64px;
+            color: white;
         }
-    }
-    @media screen and (max-width: 720px) {
-        paper-card.paper-card-0 .card-content {
-            min-width: 520px;
+
+        #header {
+            position: relative;
+            height: 220px;
         }
-    }
-    @media screen and (max-width: 640px) {
-        paper-card.paper-card-0 .card-content {
-            min-width: 0px;
+
+        paper-checkbox {
+            display: block;
+            padding: 12px;
         }
-        #register-card.my-register {
-            padding: 12px 0px;
-        }
-        paper-card.my-register {
-            top: 0;
-        }
-        #header.my-register {
-            height: 130px;
+
+        paper-card {
+            margin: 12px;
+            top: -108px;
+            max-width: 860px;
             padding: 8px;
         }
-        h1.my-register {
-            bottom: 0;
-            margin: 18px 12px;
-            font-size: 36px;
+
+        paper-card.card-content {
+            padding: 16px 22px;
         }
-    }
+
+        paper-card.paper-card-0 .card-content {
+            min-width: 760px;
+        }
+
+        #register-card {
+            background-color: #F2F2F2;
+            padding: 26px 16px;
+        }
+
+        paper-radio-button {
+            display: block;
+        }
+
+        paper-radio-button.my-register {
+            padding: 12px;
+        }
+
+        @media screen and (max-width: 860px) {
+            paper-card.paper-card-0 .card-content {
+                min-width: 620px;
+            }
+        }
+
+        @media screen and (max-width: 720px) {
+            paper-card.paper-card-0 .card-content {
+                min-width: 520px;
+            }
+        }
+
+        @media screen and (max-width: 640px) {
+            paper-card.paper-card-0 .card-content {
+                min-width: 0px;
+            }
+
+            #register-card.my-register {
+                padding: 12px 0px;
+            }
+
+            paper-card.my-register {
+                top: 0;
+            }
+
+            #header.my-register {
+                height: 130px;
+                padding: 8px;
+            }
+
+            h1.my-register {
+                bottom: 0;
+                margin: 18px 12px;
+                font-size: 36px;
+            }
+        }
     </style>
     <template>
         <div id="header">
-            <h1>Register</h1> </div>
+            <h1>Register</h1></div>
         <div id="register-card">
             <div class="horizontal center-justified layout">
                 <paper-card>
                     <div class="card-content">
                         <h2>DevFest Kuala Lumpur 2015 Registration</h2>
-                        <p>This year on the 7th of November at MaGIC, we are bringing you guys another round of developer focused events at DevFest KL. For starters, we have Polymer Codelabs, Android design library, and even hacking up Cardboard apps with Unity!</p>
-                        <p>There’ll also be experts giving talks on topics ranging from tech in education to mobile web technology to Women Techmakers.</p>
-                        <p><i>*All information collected is confidential and will not be shared with any third parties</i>
+
+                        <p>This year on the 7th of November at MaGIC, we are bringing you guys another round of
+                            developer focused events at DevFest KL. For starters, we have Polymer Codelabs, Android
+                            design library, and even hacking up Cardboard apps with Unity!</p>
+
+                        <p>There’ll also be experts giving talks on topics ranging from tech in education to mobile web
+                            technology to Women Techmakers.</p>
+
+                        <p><i>*All information collected is confidential and will not be shared with any third
+                            parties</i>
                         </p>
-                        <form id="form" action="https://docs.google.com/forms/d/1hJdNH5iY4-DUVODE_HOzjB2cu8gtrZatiqAr1ntcvrA/formResponse" method="POST">
-                            <paper-input type="text" name="entry.1855715773" id="entry_1855715773" label="Name" required></paper-input>
-                            <paper-input type="email" name="entry.484649089" id="entry_484649089" label="Email" required></paper-input>
-                            <paper-input type="tel" name="entry.236930924" id="entry_236930924" label="Contact No."></paper-input>
-                            <paper-input type="text" name="entry.1631052923" id="entry_1631052923" label="Organization Name (Name of your awesome startup/ workplace /business!)"></paper-input>
-                            <input name="entry.1178687042" id="input_shirt" style="visibility: hidden; widows: 0; height: 0;">
+
+                        <form id="form"
+                              is="iron-form"
+                              action="https://docs.google.com/forms/d/1hJdNH5iY4-DUVODE_HOzjB2cu8gtrZatiqAr1ntcvrA/formResponse"
+                              method="POST">
+                            <paper-input type="text" name="entry.1855715773" id="entry_1855715773" label="Name"
+                                         required></paper-input>
+                            <paper-input type="email" name="entry.484649089" id="entry_484649089" label="Email"
+                                         required></paper-input>
+                            <paper-input type="tel" name="entry.236930924" id="entry_236930924"
+                                         label="Contact No."></paper-input>
+                            <paper-input type="text" name="entry.1631052923" id="entry_1631052923"
+                                         label="Organization Name (Name of your awesome startup/ workplace /business!)"></paper-input>
+                            <input name="entry.1178687042" id="input_shirt"
+                                   style="visibility: hidden; widows: 0; height: 0;">
+
                             <h3>T-shirt size</h3>
                             <h4>We can't promise we'll have enough those who don't register!</h4>
                             <paper-radio-group selected="shirt1" class="shirt">
-                                <paper-radio-button name="shirt1" label="XS">XS </paper-radio-button>
-                                <paper-radio-button name="shirt2" label="S">S </paper-radio-button>
-                                <paper-radio-button name="shirt3" label="M">M </paper-radio-button>
-                                <paper-radio-button name="shirt4" label="L">L </paper-radio-button>
-                                <paper-radio-button name="shirt5" label="XL">XL </paper-radio-button>
-                                <paper-radio-button name="shirt6" label="XXL">XXL </paper-radio-button>
+                                <paper-radio-button name="shirt1" label="XS">XS</paper-radio-button>
+                                <paper-radio-button name="shirt2" label="S">S</paper-radio-button>
+                                <paper-radio-button name="shirt3" label="M">M</paper-radio-button>
+                                <paper-radio-button name="shirt4" label="L">L</paper-radio-button>
+                                <paper-radio-button name="shirt5" label="XL">XL</paper-radio-button>
+                                <paper-radio-button name="shirt6" label="XXL">XXL</paper-radio-button>
                             </paper-radio-group>
-                            <input name="entry.713238477" id="input_experience" style="visibility: hidden; widows: 0; height: 0;">
+                            <input name="entry.713238477" id="input_experience"
+                                   style="visibility: hidden; widows: 0; height: 0;">
+
                             <h3>Which of the following do you have experience with?</h3>
-                            <!-- <paper-radio-group selected="experience1" class="experience">
-                    <paper-radio-button
-                            name="experience1"
-                            label="Android"
-                            >Android
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience2"
-                            label="iOS"
-                            >iOS
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience3"
-                            label="Google App Engine"
-                            >Google App Engine
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience4"
-                            label="Google Compute Engine"
-                            >Google Compute Engine
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience5"
-                            label="Cloud Endpoint"
-                            >Cloud Endpoint
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience6"
-                            label="BigQuery"
-                            >BigQuery
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience7"
-                            label="Kubernetes"
-                            >Kubernetes
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience8"
-                            label="Firebase"
-                            >Firebase
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience9"
-                            label="AngularJS"
-                            >AngularJS
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience10"
-                            label="AngularJS (TypeScript)"
-                            >AngularJS (TypeScript)
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience11"
-                            label="AngularDart"
-                            >AngularDart
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience12"
-                            label="Polymer"
-                            >Polymer
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience13"
-                            label="PolymerDart"
-                            >PolymerDart
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience14"
-                            label="Dart"
-                            >Dart
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience15"
-                            label="Gradle"
-                            >Gradle
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience16"
-                            label="GWT"
-                            >GWT
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience17"
-                            label="Chrome: Dart"
-                            >Chrome: Dart
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience18"
-                            label="Chrome: HTML5"
-                            >Chrome: HTML5
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience19"
-                            label="Google Ads"
-                            >Google Ads
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience20"
-                            label="Google Maps API"
-                            >Google Maps API
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience21"
-                            label="Google Analytics"
-                            >Google Analytics
-                    </paper-radio-button>  
-                    <paper-radio-button
-                            name="experience22"
-                            label="Google Apps/Drive"
-                            >Google Apps/Drive
-                    </paper-radio-button>  
-                    <paper-radio-button
-                            name="experience23"
-                            label="Wearables"
-                            >Wearables
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience24"
-                            label="Google+"
-                            >Google+
-                    </paper-radio-button>  
-                    <paper-radio-button
-                            name="experience25"
-                            label="Golang"
-                            >Golang
-                    </paper-radio-button>  
-                    
-                
 
-                <input name="entry.1821766891" id="input_learning" style="visibility: hidden; widows: 0; height: 0;">
+                            <!--<input type="checkbox" name="entry.713238477" value="Android" id="group_713238477_1"-->
+                            <!--role="checkbox" class="ss-q-checkbox" style="display: none;">-->
+                            <!--<paper-radio-group selected="experience1" class="experience">-->
+                            <paper-checkbox
+                                    data-name="Android"
+                                    name="entry.713238477"
+                                    id="group_713238477_1"
+                                    >Android
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="iOS"
+                                    name="entry.713238477"
+                                    id="group_713238477_2"
+                                    >iOS
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Google App Engine"
+                                    name="entry.713238477"
+                                    id="group_713238477_3"
+                                    >Google App Engine
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Google Compute Engine"
+                                    name="entry.713238477"
+                                    id="group_713238477_4"
+                                    >Google Compute Engine
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Cloud Endpoint"
+                                    name="entry.713238477"
+                                    id="group_713238477_5"
+                                    >Cloud Endpoint
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="BigQuery"
+                                    name="entry.713238477"
+                                    id="group_713238477_6"
+                                    >BigQuery
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Kubernetes"
+                                    name="entry.713238477"
+                                    id="group_713238477_7"
+                                    >Kubernetes
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Firebase"
+                                    name="entry.713238477"
+                                    id="group_713238477_8"
+                                    >Firebase
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="AngularJS"
+                                    name="entry.713238477"
+                                    id="group_713238477_9"
+                                    >AngularJS
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="AngularJS (TypeScript)"
+                                    name="entry.713238477"
+                                    id="group_713238477_10"
+                                    >AngularJS (TypeScript)
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="AngularDart"
+                                    name="entry.713238477"
+                                    id="group_713238477_11"
+                                    >AngularDart
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Polymer"
+                                    name="entry.713238477"
+                                    id="group_713238477_12"
+                                    >Polymer
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="PolymerDart"
+                                    name="entry.713238477"
+                                    id="group_713238477_13"
+                                    >PolymerDart
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Dart"
+                                    name="entry.713238477"
+                                    id="group_713238477_14"
+                                    >Dart
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Gradle"
+                                    name="entry.713238477"
+                                    id="group_713238477_15"
+                                    >Gradle
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="GWT"
+                                    name="entry.713238477"
+                                    id="group_713238477_16"
+                                    >GWT
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Chrome: Dart"
+                                    name="entry.713238477"
+                                    id="group_713238477_17"
+                                    >Chrome: Dart
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Chrome: HTML5"
+                                    name="entry.713238477"
+                                    id="group_713238477_18"
+                                    >Chrome: HTML5
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Google Ads"
+                                    name="entry.713238477"
+                                    id="group_713238477_19"
+                                    >Google Ads
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Google Maps API"
+                                    name="entry.713238477"
+                                    id="group_713238477_20"
+                                    >Google Maps API
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Google Analytics"
+                                    name="entry.713238477"
+                                    id="group_713238477_21"
+                                    >Google Analytics
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Google Apps/Drive"
+                                    name="entry.713238477"
+                                    id="group_713238477_22"
+                                    >Google Apps/Drive
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Wearables"
+                                    name="entry.713238477"
+                                    id="group_713238477_23"
+                                    >Wearables
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Google+"
+                                    name="entry.713238477"
+                                    id="group_713238477_24"
+                                    >Google+
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Golang"
+                                    name="entry.713238477"
+                                    id="group_713238477_25"
+                                    >Golang
+                            </paper-checkbox>
 
-                <h3>Which of the following do you have experience with?</h3>
-                <paper-radio-group selected="experience1" class="experience">
-                    <paper-radio-button
-                            name="learning1"
-                            label="Android"
-                            >Android
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="learning2"
-                            label="iOS"
-                            >iOS
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="learning3"
-                            label="Google App Engine"
-                            >Google App Engine
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="learning4"
-                            label="Google Compute Engine"
-                            >Google Compute Engine
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="learning5"
-                            label="Cloud Endpoint"
-                            >Cloud Endpoint
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="learning6"
-                            label="BigQuery"
-                            >BigQuery
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience7"
-                            label="Kubernetes"
-                            >Kubernetes
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="learning8"
-                            label="Firebase"
-                            >Firebase
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="learning9"
-                            label="AngularJS"
-                            >AngularJS
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="learning10"
-                            label="AngularJS (TypeScript)"
-                            >AngularJS (TypeScript)
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="learning11"
-                            label="AngularDart"
-                            >AngularDart
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="learning12"
-                            label="Polymer"
-                            >Polymer
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="learning13"
-                            label="PolymerDart"
-                            >PolymerDart
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="learning14"
-                            label="Dart"
-                            >Dart
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="experience15"
-                            label="Gradle"
-                            >Gradle
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="learning16"
-                            label="GWT"
-                            >GWT
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="learning17"
-                            label="Chrome: Dart"
-                            >Chrome: Dart
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="learning18"
-                            label="Chrome: HTML5"
-                            >Chrome: HTML5
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="learning19"
-                            label="Google Ads"
-                            >Google Ads
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="learning20"
-                            label="Google Maps API"
-                            >Google Maps API
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="learning21"
-                            label="Google Analytics"
-                            >Google Analytics
-                    </paper-radio-button>  
-                    <paper-radio-button
-                            name="learning22"
-                            label="Google Apps/Drive"
-                            >Google Apps/Drive
-                    </paper-radio-button>  
-                    <paper-radio-button
-                            name="learning23"
-                            label="Wearables"
-                            >Wearables
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="learning24"
-                            label="Google+"
-                            >Google+
-                    </paper-radio-button>  
-                    <paper-radio-button
-                            name="experience25"
-                            label="User Research (UI/UX)"
-                            >User Research (UI/UX)
-                    </paper-radio-button>  
-                    <paper-radio-button
-                            name="experience26"
-                            label="Interaction Design (UI/UX)"
-                            >Interaction Design (UI/UX)
-                    </paper-radio-button> 
-                    <paper-radio-button
-                            name="experience27"
-                            label="Visual Design (UI/UX)"
-                            >Visual Design (UI/UX)
-                    </paper-radio-button>     -->
-                            <input type="hidden" name="draftResponse" value="[,,&quot;-8576105153038084395&quot;]" />
-                            <input type="hidden" name="pageHistory" value="0" />
-                            <input type="hidden" name="fbzx" value="-187517254043371827" />
+
+                            <!--<input name="entry.1821766891" id="input_learning" style="visibility: hidden; widows: 0; height: 0;">-->
+                            <!--<input type="checkbox" name="entry.1821766891" value="Android" id="group_1821766891_1"-->
+                            <!--role="checkbox" class="ss-q-checkbox" style="display:none">-->
+
+                            <h3>Which of the following are you keen on learning this coming year?</h3>
+                            <!--<paper-radio-group selected="experience1" class="experience">-->
+                            <paper-checkbox
+                                    data-name="Android"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_1"
+                                    >Android
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="iOS"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_2"
+                                    >iOS
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Google App Engine"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_3"
+                                    >Google App Engine
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Google Compute Engine"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_4"
+                                    >Google Compute Engine
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Cloud Endpoint"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_5"
+                                    >Cloud Endpoint
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="BigQuery"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_6"
+                                    >BigQuery
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Kubernetes"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_7"
+                                    >Kubernetes
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Firebase"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_8"
+                                    >Firebase
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="AngularJS"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_9"
+                                    >AngularJS
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="AngularJS (TypeScript)"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_10"
+                                    >AngularJS (TypeScript)
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="AngularDart"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_11"
+                                    >AngularDart
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Polymer"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_12"
+                                    >Polymer
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="PolymerDart"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_13"
+                                    >PolymerDart
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Dart"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_14"
+                                    >Dart
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Gradle"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_15"
+                                    >Gradle
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="GWT"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_16"
+                                    >GWT
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Chrome: Dart"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_17"
+                                    >Chrome: Dart
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Chrome: HTML5"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_18"
+                                    >Chrome: HTML5
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Google Ads"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_19"
+                                    >Google Ads
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Google Maps API"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_20"
+                                    >Google Maps API
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Google Analytics"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_21"
+                                    >Google Analytics
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Google Apps/Drive"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_22"
+                                    >Google Apps/Drive
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Wearables"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_23"
+                                    >Wearables
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Google+"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_24"
+                                    >Google+
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="User Research (UI/UX)"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_25"
+                                    >User Research (UI/UX)
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Interaction Design (UI/UX)"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_26"
+                                    >Interaction Design (UI/UX)
+                            </paper-checkbox>
+                            <paper-checkbox
+                                    data-name="Visual Design (UI/UX)"
+                                    name="entry.1821766891"
+                                    id="group_1821766891_27"
+                                    >Visual Design (UI/UX)
+                            </paper-checkbox>
+                            <input type="hidden" name="draftResponse" value="[,,&quot;-8576105153038084395&quot;]"/>
+                            <input type="hidden" name="pageHistory" value="0"/>
+                            <input type="hidden" name="fbzx" value="-187517254043371827"/>
+
                             <div style="width: 100%;">
                                 <paper-button raised id="submit_form" icon="send">Submit</paper-button>
                                 <button style="visibility: hidden" id="real_send" type="submit">Submit</button>
@@ -378,33 +473,51 @@
             </div>
         </div>
         <script>
-        $(function() {
-            $('.shirt paper-radio-button').on('click', function() {
-                $('#input_shirt').val(($(this).attr('label')))
-            });
-            $('#submit_form').click(function() {
-                $('#real_send').trigger('click')
-            });
+            $(function () {
+                $('.shirt paper-radio-button').on('click', function () {
+                    $('#input_shirt').val(($(this).attr('label')))
+                });
+                $('#submit_form').click(function () {
+                    $('#real_send').trigger('click')
+                });
 
-            function initValues() {
-                $('.shirt paper-radio-button').first().trigger('click');
-                $('.learning paper-radio-button').first().trigger('click');
-            }
+                function initValues() {
+                    $('.shirt paper-radio-button').first().trigger('click');
+                    $('.learning paper-radio-button').first().trigger('click');
+                }
 
-            function removeNames() {
-                $('.shirt paper-radio-button').attr('name', '');
-                $('.learning paper-radio-button').attr('name', '');
-            }
-            initValues();
-        });
+                function removeNames() {
+                    $('.shirt paper-radio-button').attr('name', '');
+                    $('.learning paper-radio-button').attr('name', '');
+                }
+
+                function addCheckBoxCallbacks() {
+                    $('paper-checkbox').change(function () {
+                        if (this.checked) {
+                            //add child
+                            var data = $(this).data('name');
+                            var name = $(this).attr('name');
+                            $(this).append($('<input name="' + name +'" value="'+ data +'" class="fake" style="display:none;">'));
+                            console.log('added')
+                        } else {
+                            //clear child
+                            console.log($(this).find('input.fake'));
+                            $(this).find('input.fake').remove();
+                        }
+                    });
+                }
+
+                addCheckBoxCallbacks();
+                initValues();
+            });
         </script>
     </template>
     <script>
-    (function() {
-        'use strict';
-        Polymer({
-            is: 'my-register'
-        });
-    })();
+        (function () {
+            'use strict';
+            Polymer({
+                is: 'my-register'
+            });
+        })();
     </script>
 </dom-module>
