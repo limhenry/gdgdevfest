@@ -1,5 +1,11 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <dom-module id="my-home">
+    <style>
+        paper-button.fancy {
+            background: #F44336;
+            color: white;
+        }
+    </style>
     <template>
         <div id="header">
             <div id="header-content"> <img src="https://developers.google.com/events/devfest/images/gdg-devfest-2015.svg" height="150px"> </div>
@@ -8,21 +14,28 @@
             <div id="event_desc">
                 <paper-card style="top: -96px; margin: 24px 0;">
                     <div class="card-content">
-                        <h3>GDG DevFests are large, community-run events that can offer speaker sessions across multiple product areas, all-day hack-a-thons, code labs, and more. In 2015, the official DevFest Season runs from September 01st through November 30th.</h3> </div>
+                        <h3>This year on the 7th of November at MaGIC, we are bringing you guys another round of
+                            developer focused events at DevFest KL. For starters, we have Polymer Codelabs, Android
+                            design library, and even hacking up Cardboard apps with Unity!
+                        </h3>
+                    </div>
                     <div class="card-actions">
+                        Seats are limited,
                         <a data-route="register" href="/register">
-                            <paper-button title="Register Now"></paper-button>
+                            <paper-button title="Register Now" class="fancy">Register Now</paper-button>
                         </a>
                     </div>
                 </paper-card>
             </div>
             <div id="sandbox">
-                <h2>Sandbox</h2>
+                <h2>Fun</h2>
                 <p>Interactive zones on the second and third floors for you to play, explore, and collaborate with the latest from Google.</p>
                 <div class="horizontal layout" id="sandbox-flex">
                     <div class="flex">
-                        <h4>Sandbox Talks</h4>
-                        <p>Shorter talks in pop-up spaces in the sandbox, letting you hear directly from us about developing with our latest APIs and tools. </p>
+                        <h4>Talks</h4>
+                        <p>Shorter talks in pop-up spaces in the sandbox,
+                            letting you hear directly from us about developing with our latest APIs and tools.
+                        </p>
                     </div>
                     <div class="flex">
                         <h4>Code Labs</h4>
@@ -55,11 +68,11 @@
                 </div>
             </div>
             <div id="sponsor">
-                <h1>SPONSORS</h1>
-                <h3>General Sponsor</h3> <img src="http://devfest.gdg.org.ua/images/partners/google.svg" height="60px">
-                <h3>Diamond sponsor</h3> <img src="http://devfest.gdg.org.ua/images/partners/google.svg" height="60px"> <img src="http://devfest.gdg.org.ua/images/partners/google.svg" height="60px">
-                <br> <img src="http://devfest.gdg.org.ua/images/partners/google.svg" height="60px"> <img src="http://devfest.gdg.org.ua/images/partners/google.svg" height="60px"> <img src="http://devfest.gdg.org.ua/images/partners/google.svg" height="60px">
-                <h3>Donation ( ͡° ͜ʖ ͡°)</h3> <img src="http://devfest.gdg.org.ua/images/partners/google.svg" height="60px"> <img src="http://devfest.gdg.org.ua/images/partners/google.svg" height="60px"> </div>
+                <h3>Organized By</h3> <img src="https://developers.google.com/events/devfest/images/gdg-devfest-2015.svg" height="60px">
+                <h3>Supported By</h3> <img src="http://devfest.gdg.org.ua/images/partners/google.svg" height="60px">
+                <img src="http://1-ps.googleusercontent.com/xk/3D6ucRnjoa3hq556zmREI8yTIg/s.devfestkl.appspot.com/devfestkl.appspot.com/img/2013/xlogo-googledevelopers.png.pagespeed.ic.MI2GsrKRGmKEwYwc6mYi.png" height="60px">
+                <img src="../res/women-techmaker.png" height="60px">
+                <h3>Venue Provided By</h3><img src="../res/magic.png" height="60px">
     </template>
     <script>
     (function() {
