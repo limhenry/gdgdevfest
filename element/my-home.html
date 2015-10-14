@@ -1,0 +1,90 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="my-home">
+
+  <template>
+
+    <div id="header">
+    <div id="header-content">
+      <img src="https://developers.google.com/events/devfest/images/gdg-devfest-2015.svg" height="150px">
+    </div>
+    </div>
+    <div id="content">
+    <div id="event_desc">
+      <paper-card style="top: -96px; margin: 24px 0;">
+        <div class="card-content"><h3>GDG DevFests are large, community-run events that can offer speaker sessions across multiple product areas, all-day hack-a-thons, code labs, and more. In 2015, the official DevFest Season runs from September 01st through November 30th.</h3></div>
+        <div class="card-actions">
+          <a data-route="register" href="/register"><paper-button title="Register Now"></paper-button></a>
+        </div>
+      </paper-card>
+    </div>
+    <div id="sandbox">
+      <h2>Sandbox</h2>
+      <p>Interactive zones on the second and third floors for you to play, explore, and collaborate with the latest from Google.</p>
+      <div class="horizontal layout" id="sandbox-flex">
+        <div class="flex">
+          <h4>Sandbox Talks</h4>
+          <p>Shorter talks in pop-up spaces in the sandbox, letting you hear directly from us about developing with our latest APIs and tools. </p>
+        </div>
+        <div class="flex">
+          <h4>Code Labs</h4>
+          <p>Hands-on space to work through technical modules at your own pace, with experts on hand to help you out.</p>
+        </div>
+        <div class="flex">
+          <h4>There's more</h4>
+          <p>Swing by office hours, workshops and demos throughout the space.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="maps">
+      <google-map class="style-scope map-block" zoom="16" latitude="2.9088648402073045" longitude="101.66327353868405" disable-zoom="" disable-default-ui="">
+        <google-map-marker latitude="2.9086934" longitude="101.6553342"></google-map-marker>
+      </google-map>
+      <div class="container card-container relative layout horizontal center-center style-scope map-block" id="direction-card">
+            <div class="flex-3 hidden-xs style-scope map-block"></div>
+                <paper-card class="flex-2 style-scope map-block x-scope paper-card-0" aria-label="" id="direction-card-paper">
+            <div class="card-content">
+                      <h1>Location</h1>
+                        <p>Malaysian Global Innovation & Creativity Centre<br>Block 3730, Persiaran Apec, 63000 Cyberjaya, Selangor, Malaysia</p>
+                   </div>
+                  <div class="card-actions">
+                    <paper-button>
+                      <iron-icon icon="maps:directions"></iron-icon>
+                      Get Direction
+                    </paper-button>
+                  </div>
+                </paper-card>
+              <div class="flex hidden-xs style-scope map-block"></div>
+        </div>  
+    </div>
+
+    <div id="sponsor">
+      <h1>SPONSORS</h1>
+      <h3>General Sponsor</h3>
+      <img src="http://devfest.gdg.org.ua/images/partners/google.svg" height="60px">    
+      <h3>Diamond sponsor</h3>
+      <img src="http://devfest.gdg.org.ua/images/partners/google.svg" height="60px">
+      <img src="http://devfest.gdg.org.ua/images/partners/google.svg" height="60px"><br>
+      <img src="http://devfest.gdg.org.ua/images/partners/google.svg" height="60px">
+      <img src="http://devfest.gdg.org.ua/images/partners/google.svg" height="60px">
+      <img src="http://devfest.gdg.org.ua/images/partners/google.svg" height="60px">
+      <h3>Donation ( ͡° ͜ʖ ͡°)</h3>
+      <img src="http://devfest.gdg.org.ua/images/partners/google.svg" height="60px">
+      <img src="http://devfest.gdg.org.ua/images/partners/google.svg" height="60px">
+    </div>
+
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+      
+      Polymer({
+        is: 'my-home'
+
+      });
+    })();
+  </script>
+
+</dom-module>

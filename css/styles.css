@@ -1,0 +1,114 @@
+body{
+	margin: 0;
+	font-family: Roboto;
+	background-color: #00BCD4;
+}
+
+paper-toolbar.paper-toolbar-0{
+	background: #00BCD4;
+	color: white;
+}
+
+#header{
+	padding: 48px;
+	height: 300px;
+}
+#header-content{
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 12px;
+}
+#event_desc{
+	margin: 0 auto;
+	max-width: 960px;
+	color: white;
+	margin-bottom: -48px;
+}
+#content{
+	background-color: #455A64;
+}
+paper-card .card-content {
+	padding: 24px 32px;
+	color: #5c5c5c;
+}
+paper-card .card-actions {
+	padding: 12px 24px;
+	color: #5c5c5c;
+	font-weight: 600;
+}
+h3{
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 32px;
+}
+.flex{
+	margin: 12px;
+}
+google-map {
+	height: 480px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;			
+}
+#sponsor{
+	padding: 96px 48px;
+	text-align: center;
+	color: #5c5c5c;
+	background-color: #F5F5F5;
+}
+#sandbox{
+	margin: 0 auto;
+	max-width: 960px;
+	margin-bottom: -58px;
+	color: white;
+}
+#maps{
+    margin-top: 120px;
+    height: 480px;
+    position: relative;
+}
+#direction-card{
+	padding-top:64px;
+}
+#sponsor img{
+	margin: 12px;
+}
+#footer{
+	background-color: white;
+	padding: 68px 48px 24px 48px;
+	font-weight: 300;
+	color: #757575;
+}
+
+.linknounderline{
+	text-decoration: none;
+	color: white;
+}
+
+ @media screen and (max-width: 640px){
+ 	#sandbox{
+		padding: 16px;
+ 	}
+ 	#sandbox-flex{
+ 		display: block;
+ 	}
+ 	#sandbox-flex .flex{
+ 		margin: 0;
+ 	} 	
+ 	#footer-flex{
+ 		display: block;
+ 	}
+ 	google-map{
+ 		height: 240px;
+		position: relative;
+ 	}
+ 	#direction-card{
+ 		display: block;
+ 		padding-top: 0;
+ 	}
+	#direction-card-paper{
+		width: 100%
+	}		 	
+ }

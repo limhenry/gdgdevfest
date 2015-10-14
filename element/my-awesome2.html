@@ -1,0 +1,53 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-media-query/iron-media-query.html">
+<link rel="import" href="../../bower_components/paper-drawer-panel/paper-drawer-panel.html">
+<link rel="import" href="../../bower_components/paper-menu/paper-menu.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+
+<dom-module id="my-awesome2">        
+
+  <template>
+        <template is="dom-bind" id="app">
+              
+              <iron-pages attr-for-selected="data-route" selected="{{route}}">
+
+                <section data-route="home">  
+                <!-- <my-toolbar></my-toolbar> -->
+                  <my-home></my-home>
+                </section>
+
+                <section data-route="speaker">
+                <!-- <my-toolbar></my-toolbar> -->
+                  <my-toolbar-logo></my-toolbar-logo>
+                  <my-speaker></my-speaker>
+                </section>
+
+                <section data-route="schedule">
+                <!-- <my-toolbar></my-toolbar> -->
+                  <my-toolbar-logo></my-toolbar-logo>
+                  <my-schedule></my-schedule>
+                </section>
+
+                <section data-route="register">
+                <!-- <my-toolbar></my-toolbar> -->
+                  <my-toolbar-logo></my-toolbar-logo>
+                  <my-register></my-register>
+                </section>
+
+              </iron-pages>
+
+            </template>    
+</template>
+
+  <script>
+    (function() {
+      'use strict';
+      
+      Polymer({
+        is: 'my-awesome2'
+
+      });
+    })();
+  </script>
+
+</dom-module>

@@ -1,0 +1,46 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-media-query/iron-media-query.html">
+<link rel="import" href="../../bower_components/paper-drawer-panel/paper-drawer-panel.html">
+<link rel="import" href="../../bower_components/paper-menu/paper-menu.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+
+<dom-module id="my-awesome">        
+
+  <template>
+        <template is="dom-bind" id="app">
+              
+              <iron-pages attr-for-selected="data-route" selected="{{route}}">
+              
+                <section data-route="home">  
+                  <my-home></my-home>
+                </section>
+
+                <section data-route="speaker">
+                  <my-speaker></my-speaker>
+                </section>
+
+                <section data-route="schedule">
+                  <my-schedule></my-schedule>
+                </section>
+
+                <section data-route="register">
+                  <my-register></my-register>
+                </section>
+
+              </iron-pages>
+
+            </template>    
+</template>
+
+  <script>
+    (function() {
+      'use strict';
+      
+      Polymer({
+        is: 'my-awesome'
+
+      });
+    })();
+  </script>
+
+</dom-module>
