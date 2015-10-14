@@ -1,141 +1,102 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/paper-radio-group/paper-radio-group.html">
-<link rel="import" href="../../bower_components/paper-radio-button/paper-radio-button.html">
-<link rel="import" href="../../bower_components/paper-input/paper-input.html">
-
-
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <dom-module id="my-register">
-<style>
-  h1{
-    font-weight: 200;
-    font-size: 42px;
-    position: absolute;
-    bottom: 64px;
-    color: white;
-  }
-  #header{
-    position: relative;
-    height: 220px;
-  }
-  paper-card{
-    margin: 12px;
-    top: -108px;
-    max-width: 860px;
-    padding: 8px;
-  }
-  paper-card.card-content{
-    padding: 16px 22px;
-  }
-    paper-card.paper-card-0 .card-content{
-      min-width: 760px;
-    }  
-  #register-card{
-    background-color: #F2F2F2;
-    padding: 26px 16px;
-  }
+    <style>
+    h1 {
+        font-weight: 200;
+        font-size: 42px;
+        position: absolute;
+        bottom: 64px;
+        color: white;
+    }
+    #header {
+        position: relative;
+        height: 220px;
+    }
+    paper-card {
+        margin: 12px;
+        top: -108px;
+        max-width: 860px;
+        padding: 8px;
+    }
+    paper-card.card-content {
+        padding: 16px 22px;
+    }
+    paper-card.paper-card-0 .card-content {
+        min-width: 760px;
+    }
+    #register-card {
+        background-color: #F2F2F2;
+        padding: 26px 16px;
+    }
     paper-radio-button {
         display: block;
     }
-    paper-radio-button.my-register{
-      padding: 12px;
+    paper-radio-button.my-register {
+        padding: 12px;
     }
-
-  @media screen and (max-width: 860px){
-    paper-card.paper-card-0 .card-content{
-      min-width: 620px;
+    @media screen and (max-width: 860px) {
+        paper-card.paper-card-0 .card-content {
+            min-width: 620px;
+        }
     }
-  }    
-  @media screen and (max-width: 720px){
-    paper-card.paper-card-0 .card-content{
-      min-width: 520px;
+    @media screen and (max-width: 720px) {
+        paper-card.paper-card-0 .card-content {
+            min-width: 520px;
+        }
     }
-  }
-   @media screen and (max-width: 640px){
-    paper-card.paper-card-0 .card-content{
-      min-width: 0px;
-    }    
-      #register-card.my-register{
-        padding: 12px 0px;
-      }
-      paper-card.my-register{
-        top: 0;
-      }
-      #header.my-register{
-        height: 130px;
-        padding: 8px;
-      }
-      h1.my-register{
-        bottom: 0;
-        margin: 18px 12px;
-        font-size: 36px;
-      }
-   }
-</style>
-  <template>
-      <div id="header">
-        <h1>Register</h1>
-      </div>
-      <div id="register-card">
-      <div class="horizontal center-justified layout">
-          <paper-card>
-            <div class="card-content">
-            <h2>DevFest Kuala Lumpur 2015 Registration</h2>
-            <p>This year on the 7th of November at MaGIC, we are bringing you guys another round of developer focused events at DevFest KL. For starters, we have Polymer Codelabs, Android design library, and even hacking up Cardboard apps with Unity!</p>
-            <p>There’ll also be experts giving talks on topics ranging from tech in education to mobile web technology to Women Techmakers.</p>
-            <p><i>*All information collected is confidential and will not be shared with any third parties</i></p>
-             <form id="form"
-                  action="https://docs.google.com/forms/d/1hJdNH5iY4-DUVODE_HOzjB2cu8gtrZatiqAr1ntcvrA/formResponse"
-                  method="POST">
-                <paper-input type="text" name="entry.1855715773" id="entry_1855715773"
-                             label="Name" required></paper-input>
-                <paper-input type="email" name="entry.484649089" id="entry_484649089"
-                             label="Email" required></paper-input>
-                <paper-input type="tel" name="entry.236930924" id="entry_236930924"
-                             label="Contact No."></paper-input>
-                <paper-input type="text" name="entry.1631052923" id="entry_1631052923"
-                             label="Organization Name (Name of your awesome startup/ workplace /business!)"></paper-input>                                                          
-                <input name="entry.1178687042" id="input_shirt" style="visibility: hidden; widows: 0; height: 0;">
-
-                <h3>T-shirt size</h3>
-                <h4>We can't promise we'll have enough those who don't register!</h4>
-                <paper-radio-group selected="shirt1" class="shirt">
-                    <paper-radio-button
-                            name="shirt1"
-                            label="XS"
-                            >XS
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="shirt2"
-                            label="S"
-                            >S
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="shirt3"
-                            label="M"
-                            >M
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="shirt4"
-                            label="L"
-                            >L
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="shirt5"
-                            label="XL"
-                            >XL
-                    </paper-radio-button>
-                    <paper-radio-button
-                            name="shirt6"
-                            label="XXL"
-                            >XXL
-                    </paper-radio-button>
-                </paper-radio-group>
-
-
-                <input name="entry.713238477" id="input_experience" style="visibility: hidden; widows: 0; height: 0;">
-
-                <h3>Which of the following do you have experience with?</h3>
-                <!-- <paper-radio-group selected="experience1" class="experience"> -->
+    @media screen and (max-width: 640px) {
+        paper-card.paper-card-0 .card-content {
+            min-width: 0px;
+        }
+        #register-card.my-register {
+            padding: 12px 0px;
+        }
+        paper-card.my-register {
+            top: 0;
+        }
+        #header.my-register {
+            height: 130px;
+            padding: 8px;
+        }
+        h1.my-register {
+            bottom: 0;
+            margin: 18px 12px;
+            font-size: 36px;
+        }
+    }
+    </style>
+    <template>
+        <div id="header">
+            <h1>Register</h1> </div>
+        <div id="register-card">
+            <div class="horizontal center-justified layout">
+                <paper-card>
+                    <div class="card-content">
+                        <h2>DevFest Kuala Lumpur 2015 Registration</h2>
+                        <p>This year on the 7th of November at MaGIC, we are bringing you guys another round of developer focused events at DevFest KL. For starters, we have Polymer Codelabs, Android design library, and even hacking up Cardboard apps with Unity!</p>
+                        <p>There’ll also be experts giving talks on topics ranging from tech in education to mobile web technology to Women Techmakers.</p>
+                        <p><i>*All information collected is confidential and will not be shared with any third parties</i>
+                        </p>
+                        <form id="form" action="https://docs.google.com/forms/d/1hJdNH5iY4-DUVODE_HOzjB2cu8gtrZatiqAr1ntcvrA/formResponse" method="POST">
+                            <paper-input type="text" name="entry.1855715773" id="entry_1855715773" label="Name" required></paper-input>
+                            <paper-input type="email" name="entry.484649089" id="entry_484649089" label="Email" required></paper-input>
+                            <paper-input type="tel" name="entry.236930924" id="entry_236930924" label="Contact No."></paper-input>
+                            <paper-input type="text" name="entry.1631052923" id="entry_1631052923" label="Organization Name (Name of your awesome startup/ workplace /business!)"></paper-input>
+                            <input name="entry.1178687042" id="input_shirt" style="visibility: hidden; widows: 0; height: 0;">
+                            <h3>T-shirt size</h3>
+                            <h4>We can't promise we'll have enough those who don't register!</h4>
+                            <paper-radio-group selected="shirt1" class="shirt">
+                                <paper-radio-button name="shirt1" label="XS">XS </paper-radio-button>
+                                <paper-radio-button name="shirt2" label="S">S </paper-radio-button>
+                                <paper-radio-button name="shirt3" label="M">M </paper-radio-button>
+                                <paper-radio-button name="shirt4" label="L">L </paper-radio-button>
+                                <paper-radio-button name="shirt5" label="XL">XL </paper-radio-button>
+                                <paper-radio-button name="shirt6" label="XXL">XXL </paper-radio-button>
+                            </paper-radio-group>
+                            <input name="entry.713238477" id="input_experience" style="visibility: hidden; widows: 0; height: 0;">
+                            <h3>Which of the following do you have experience with?</h3>
+                            <!-- <paper-radio-group selected="experience1" class="experience">
                     <paper-radio-button
                             name="experience1"
                             label="Android"
@@ -262,12 +223,12 @@
                             >Golang
                     </paper-radio-button>  
                     
-                <!-- </paper-radio-group> -->
+                
 
                 <input name="entry.1821766891" id="input_learning" style="visibility: hidden; widows: 0; height: 0;">
 
                 <h3>Which of the following do you have experience with?</h3>
-                <!-- <paper-radio-group selected="experience1" class="experience"> -->
+                <paper-radio-group selected="experience1" class="experience">
                     <paper-radio-button
                             name="learning1"
                             label="Android"
@@ -402,40 +363,48 @@
                             name="experience27"
                             label="Visual Design (UI/UX)"
                             >Visual Design (UI/UX)
-                    </paper-radio-button>                                         
-
-                <!-- </paper-radio-group> -->                
-
-                <input type="hidden" name="draftResponse" value="[,,&quot;-8576105153038084395&quot;]"/>
-                <input type="hidden" name="pageHistory" value="0"/>
-                <input type="hidden" name="fbzx" value="-187517254043371827"/>
-
-                <div style="width: 100%;">
-                    <paper-button raised id="submit_form" icon="send">Submit</paper-button>
-                    <button style="visibility: hidden" id="real_send" type="submit">Submit</button>
-                </div>
-<button id="real_send" type="submit">Submit</button>
-            </form>
-
-              </form>
+                    </paper-radio-button>     -->
+                            <input type="hidden" name="draftResponse" value="[,,&quot;-8576105153038084395&quot;]" />
+                            <input type="hidden" name="pageHistory" value="0" />
+                            <input type="hidden" name="fbzx" value="-187517254043371827" />
+                            <div style="width: 100%;">
+                                <paper-button raised id="submit_form" icon="send">Submit</paper-button>
+                                <button style="visibility: hidden" id="real_send" type="submit">Submit</button>
+                            </div>
+                        </form>
+                        </form>
+                    </div>
+                </paper-card>
             </div>
-          </paper-card>
-          </div>
-      </div>
-  </template>
+        </div>
+        <script>
+        $(function() {
+            $('.shirt paper-radio-button').on('click', function() {
+                $('#input_shirt').val(($(this).attr('label')))
+            });
+            $('#submit_form').click(function() {
+                $('#real_send').trigger('click')
+            });
 
+            function initValues() {
+                $('.shirt paper-radio-button').first().trigger('click');
+                $('.learning paper-radio-button').first().trigger('click');
+            }
 
-
-  <script>
+            function removeNames() {
+                $('.shirt paper-radio-button').attr('name', '');
+                $('.learning paper-radio-button').attr('name', '');
+            }
+            initValues();
+        });
+        </script>
+    </template>
+    <script>
     (function() {
-      'use strict';
-      
-      Polymer({
-        is: 'my-register'
-
-      });
+        'use strict';
+        Polymer({
+            is: 'my-register'
+        });
     })();
-  </script>
-
+    </script>
 </dom-module>
-

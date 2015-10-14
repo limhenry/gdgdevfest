@@ -1,361 +1,296 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/iron-image/iron-image.html">
-
 <dom-module id="my-schedule">
 <style>
-  h1{
+h1 {
     font-weight: 200;
     font-size: 42px;
     position: absolute;
     bottom: 64px;
     color: white;
-  }
-  #header{
+}
+#header {
     position: relative;
     height: 220px;
-  }
-  #schedule-card{
+}
+#schedule-card {
     background-color: #F2F2F2;
     padding: 24px;
-  }
-  #schedule-speaker-img{
+}
+#schedule-speaker-img {
     border-radius: 50%;
     height: 30px;
     width: 30px;
-  }
-  #schedule-card-detail{
+}
+#schedule-card-detail {
     max-width: 860px;
     margin: auto;
-  }
-  #schedule-card-detail-card{
+}
+#schedule-card-detail-card {
     margin: 8px;
-  }
-  #schedule-card-detail-card paper-card{
+}
+#schedule-card-detail-card paper-card {
     width: 100%;
-  }
-  .card-content h3{
+}
+.card-content h3 {
     font-weight: 300;
     font-size: 24px;
-  }
-  .person-detail{
+}
+.person-detail {
     height: 30px;
     margin: 0 12px;
     margin-left: 12px;
-  }
-  .flex{
+}
+.flex {
     margin: 0;
-  }
-  #speaker-name{
-    margin-left:12px;
-  }
-  #schedule-flex{
+}
+#speaker-name {
+    margin-left: 12px;
+}
+#schedule-flex {
     margin: -8px 0;
     display: flex;
-  }
-  #time.my-schedule{
+}
+#time.my-schedule {
     margin: 38px 0px 8px 12px;
     color: #656565;
-  }
-  #time{
+}
+#time {
     margin: 8px 6px 0 0;
-  }
-  #icon-clock{
+}
+#icon-clock {
     top: -2px;
-  }
-  #time h2{
+}
+#time h2 {
     display: inline;
     font-weight: 300;
     margin-left: 6px;
     font-size: 20px;
-  }
-
-  @media screen and (max-width: 640px){
-    #schedule-flex{
-      display: block;
-      margin: 0;
-    }    
-    #header.my-schedule{
-      height: 130px;
-      padding: 8px;
+}
+@media screen and (max-width: 640px) {
+    #schedule-flex {
+        display: block;
+        margin: 0;
     }
-    h1.my-schedule{
-      bottom: 0;
-      margin: 18px 12px;
-      font-size: 36px;
+    #header.my-schedule {
+        height: 130px;
+        padding: 8px;
     }
-  }
-   </style>
-
-  <template>
+    h1.my-schedule {
+        bottom: 0;
+        margin: 18px 12px;
+        font-size: 36px;
+    }
+}
+</style>
+    <template>
         <div id="header">
-          <h1>Schedule</h1>
-        </div>
+            <h1>Schedule</h1> </div>
         <div id="schedule-card">
             <div id="schedule-card-detail">
-              <div id="time">
-                <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
-                <h2>9.00am</h2>
-              </div>
-              <div id="schedule-card-detail-card">
-                <paper-card>
-                  <div class="card-content">
-                    <h3>Registration</h3>
-                    </div>
-                </paper-card>
-              </div>
-
-              <div id="time">
-                <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
-                <h2>10.00am</h2>
-              </div>
-              <div id="schedule-card-detail-card">
-                <paper-card>
-                  <div class="card-content">
-                    <h3>Opening introduction</h3>
-                    </div>
-                </paper-card>
-              </div>
-
-              <div id="time">
-                <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
-                <h2>10.05am</h2>
-              </div>              
-              <div id="schedule-card-detail-card">
-                <paper-card>
-                  <div class="card-content">
-                    <h3>What's new in Android M for Developers?</h3>
-                      <div class="layout horizontal">
-                        <iron-image id="schedule-speaker-img" sizing="cover" src="http://devfest.gdg.org.ua/images/people/dawid_ostrowski.jpg"></iron-image>
-                          <div class="person-detail flex layout vertical center-center">
-                              <span class="self-start" id="speaker-name">Takuo Suzuki, Google</span>
-                          </div>
-                      </div>
-                    </div>
-                </paper-card>
-              </div>
-
-              <div id="time">
-                <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
-                <h2>11.00am</h2>
-              </div>
-              <div id="schedule-card-detail-card">
-                <paper-card>
-                  <div class="card-content">
-                    <h3>Break</h3>
-                    </div>
-                </paper-card>
-              </div>
-
-              <div id="time">
-                <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
-                <h2>11.15am</h2>
-              </div>
-              
-              <!--double-->
-              <div class="horizontal layout" id="schedule-flex">
-                <div class="flex">
-                      <div id="schedule-card-detail-card">
-                        <paper-card>
-                          <div class="card-content">
-                            <h3>Polymer Starter Kit</h3>
-                              <div class="layout horizontal">
-                                <iron-image id="schedule-speaker-img" sizing="cover" src="http://devfest.gdg.org.ua/images/people/dawid_ostrowski.jpg"></iron-image>
-                                  <div class="person-detail flex layout vertical center-center ">
-                                      <span class="self-start" id="speaker-name">Dawid Ostrowski</span>
-                                  </div>
-                              </div>
-                            </div>
-                        </paper-card>
-                      </div>
-                </div>
-        
-                <div class="flex">
-                  <div id="schedule-card-detail-card">
+                <div id="time">
+                    <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
+                    <h2>9.00am</h2> </div>
+                <div id="schedule-card-detail-card">
                     <paper-card>
-                      <div class="card-content">
-                        <h3>VR & Google Cardboard</h3>
-                          <div class="layout horizontal">
-                            <iron-image id="schedule-speaker-img" sizing="cover" src="http://devfest.gdg.org.ua/images/people/dawid_ostrowski.jpg"></iron-image>
-                              <div class="person-detail flex layout vertical center-center ">
-                                  <span class="self-start" id="speaker-name">Dawid Ostrowski</span>
-                              </div>
-                          </div>
+                        <div class="card-content">
+                            <h3>Registration</h3> </div>
+                    </paper-card>
+                </div>
+                <div id="time">
+                    <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
+                    <h2>10.00am</h2> </div>
+                <div id="schedule-card-detail-card">
+                    <paper-card>
+                        <div class="card-content">
+                            <h3>Opening introduction</h3> </div>
+                    </paper-card>
+                </div>
+                <div id="time">
+                    <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
+                    <h2>10.05am</h2> </div>
+                <div id="schedule-card-detail-card">
+                    <paper-card>
+                        <div class="card-content">
+                            <h3>What's new in Android M for Developers?</h3>
+                            <div class="layout horizontal">
+                                <iron-image id="schedule-speaker-img" sizing="cover" src="http://devfest.gdg.org.ua/images/people/dawid_ostrowski.jpg"></iron-image>
+                                <div class="person-detail flex layout vertical center-center"> <span class="self-start" id="speaker-name">Takuo Suzuki, Google</span> </div>
+                            </div>
                         </div>
                     </paper-card>
-                  </div>
                 </div>
-             </div>  
-             <!--end of double-->    
-
-              <div id="time">
-                <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
-                <h2>12.15am</h2>
-              </div>
-              <!--double-->
-              <div class="horizontal layout" id="schedule-flex">
-                <div class="flex">
-                      <div id="schedule-card-detail-card">
-                        <paper-card>
-                          <div class="card-content">
-                            <h3>Polymer Starter Kit</h3>
-                              <div class="layout horizontal">
-                                <iron-image id="schedule-speaker-img" sizing="cover" src="http://devfest.gdg.org.ua/images/people/dawid_ostrowski.jpg"></iron-image>
-                                  <div class="person-detail flex layout vertical center-center ">
-                                      <span class="self-start" id="speaker-name">Dawid Ostrowski</span>
-                                  </div>
-                              </div>
-                            </div>
-                        </paper-card>
-                      </div>
-                </div>
-        
-                <div class="flex">
-                  <div id="schedule-card-detail-card">
+                <div id="time">
+                    <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
+                    <h2>11.00am</h2> </div>
+                <div id="schedule-card-detail-card">
                     <paper-card>
-                      <div class="card-content">
-                        <h3>VR & Google Cardboard</h3>
-                          <div class="layout horizontal">
-                            <iron-image id="schedule-speaker-img" sizing="cover" src="http://devfest.gdg.org.ua/images/people/dawid_ostrowski.jpg"></iron-image>
-                              <div class="person-detail flex layout vertical center-center ">
-                                  <span class="self-start" id="speaker-name">Dawid Ostrowski</span>
-                              </div>
-                          </div>
+                        <div class="card-content">
+                            <h3>Break</h3> </div>
+                    </paper-card>
+                </div>
+                <div id="time">
+                    <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
+                    <h2>11.15am</h2> </div>
+                <!--double-->
+                <div class="horizontal layout" id="schedule-flex">
+                    <div class="flex">
+                        <div id="schedule-card-detail-card">
+                            <paper-card>
+                                <div class="card-content">
+                                    <h3>Polymer Starter Kit</h3>
+                                    <div class="layout horizontal">
+                                        <iron-image id="schedule-speaker-img" sizing="cover" src="http://devfest.gdg.org.ua/images/people/dawid_ostrowski.jpg"></iron-image>
+                                        <div class="person-detail flex layout vertical center-center "> <span class="self-start" id="speaker-name">Dawid Ostrowski</span> </div>
+                                    </div>
+                                </div>
+                            </paper-card>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div id="schedule-card-detail-card">
+                            <paper-card>
+                                <div class="card-content">
+                                    <h3>VR & Google Cardboard</h3>
+                                    <div class="layout horizontal">
+                                        <iron-image id="schedule-speaker-img" sizing="cover" src="http://devfest.gdg.org.ua/images/people/dawid_ostrowski.jpg"></iron-image>
+                                        <div class="person-detail flex layout vertical center-center "> <span class="self-start" id="speaker-name">Dawid Ostrowski</span> </div>
+                                    </div>
+                                </div>
+                            </paper-card>
+                        </div>
+                    </div>
+                </div>
+                <!--end of double-->
+                <div id="time">
+                    <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
+                    <h2>12.15am</h2> </div>
+                <!--double-->
+                <div class="horizontal layout" id="schedule-flex">
+                    <div class="flex">
+                        <div id="schedule-card-detail-card">
+                            <paper-card>
+                                <div class="card-content">
+                                    <h3>Polymer Starter Kit</h3>
+                                    <div class="layout horizontal">
+                                        <iron-image id="schedule-speaker-img" sizing="cover" src="http://devfest.gdg.org.ua/images/people/dawid_ostrowski.jpg"></iron-image>
+                                        <div class="person-detail flex layout vertical center-center "> <span class="self-start" id="speaker-name">Dawid Ostrowski</span> </div>
+                                    </div>
+                                </div>
+                            </paper-card>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div id="schedule-card-detail-card">
+                            <paper-card>
+                                <div class="card-content">
+                                    <h3>VR & Google Cardboard</h3>
+                                    <div class="layout horizontal">
+                                        <iron-image id="schedule-speaker-img" sizing="cover" src="http://devfest.gdg.org.ua/images/people/dawid_ostrowski.jpg"></iron-image>
+                                        <div class="person-detail flex layout vertical center-center "> <span class="self-start" id="speaker-name">Dawid Ostrowski</span> </div>
+                                    </div>
+                                </div>
+                            </paper-card>
+                        </div>
+                    </div>
+                </div>
+                <!--end of double-->
+                <div id="time">
+                    <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
+                    <h2>11.00am</h2> </div>
+                <div id="schedule-card-detail-card">
+                    <paper-card>
+                        <div class="card-content">
+                            <h3>Break</h3> </div>
+                    </paper-card>
+                </div>
+                <div id="time">
+                    <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
+                    <h2>1.00pm</h2> </div>
+                <div id="schedule-card-detail-card">
+                    <paper-card>
+                        <div class="card-content">
+                            <h3>What's new in Android M for Developers?</h3>
+                            <div class="layout horizontal">
+                                <iron-image id="schedule-speaker-img" sizing="cover" src="http://devfest.gdg.org.ua/images/people/dawid_ostrowski.jpg"></iron-image>
+                                <div class="person-detail flex layout vertical center-center"> <span class="self-start" id="speaker-name">Takuo Suzuki, Google</span> </div>
+                            </div>
                         </div>
                     </paper-card>
-                  </div>
                 </div>
-             </div>  
-             <!--end of double-->   
-
-              <div id="time">
-                <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
-                <h2>11.00am</h2>
-              </div>
-              <div id="schedule-card-detail-card">
-                <paper-card>
-                  <div class="card-content">
-                    <h3>Break</h3>
-                    </div>
-                </paper-card>
-              </div>
-
-              <div id="time">
-                <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
-                <h2>1.00pm</h2>
-              </div>              
-              <div id="schedule-card-detail-card">
-                <paper-card>
-                  <div class="card-content">
-                    <h3>What's new in Android M for Developers?</h3>
-                      <div class="layout horizontal">
-                        <iron-image id="schedule-speaker-img" sizing="cover" src="http://devfest.gdg.org.ua/images/people/dawid_ostrowski.jpg"></iron-image>
-                          <div class="person-detail flex layout vertical center-center">
-                              <span class="self-start" id="speaker-name">Takuo Suzuki, Google</span>
-                          </div>
-                      </div>
-                    </div>
-                </paper-card>
-              </div>
-
-              <div id="time">
-                <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
-                <h2>2.00pm</h2>
-              </div>              
-              <div id="schedule-card-detail-card">
-                <paper-card>
-                  <div class="card-content">
-                    <h3>What's new in Android M for Developers?</h3>
-                      <div class="layout horizontal">
-                        <iron-image id="schedule-speaker-img" sizing="cover" src="http://devfest.gdg.org.ua/images/people/dawid_ostrowski.jpg"></iron-image>
-                          <div class="person-detail flex layout vertical center-center">
-                              <span class="self-start" id="speaker-name">Takuo Suzuki, Google</span>
-                          </div>
-                      </div>
-                    </div>
-                </paper-card>
-              </div>   
-              
-              <div id="time">
-                <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
-                <h2>3.00pm</h2>
-              </div>                   
-              <!--double-->
-              <div class="horizontal layout" id="schedule-flex">
-                <div class="flex">
-                      <div id="schedule-card-detail-card">
-                        <paper-card>
-                          <div class="card-content">
-                            <h3>Polymer Starter Kit</h3>
-                              <div class="layout horizontal">
-                                <iron-image id="schedule-speaker-img" sizing="cover" src="http://devfest.gdg.org.ua/images/people/dawid_ostrowski.jpg"></iron-image>
-                                  <div class="person-detail flex layout vertical center-center ">
-                                      <span class="self-start" id="speaker-name">Dawid Ostrowski</span>
-                                  </div>
-                              </div>
-                            </div>
-                        </paper-card>
-                      </div>
-                </div>
-        
-                <div class="flex">
-                  <div id="schedule-card-detail-card">
+                <div id="time">
+                    <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
+                    <h2>2.00pm</h2> </div>
+                <div id="schedule-card-detail-card">
                     <paper-card>
-                      <div class="card-content">
-                        <h3>VR & Google Cardboard</h3>
-                          <div class="layout horizontal">
-                            <iron-image id="schedule-speaker-img" sizing="cover" src="http://devfest.gdg.org.ua/images/people/dawid_ostrowski.jpg"></iron-image>
-                              <div class="person-detail flex layout vertical center-center ">
-                                  <span class="self-start" id="speaker-name">Dawid Ostrowski</span>
-                              </div>
-                          </div>
+                        <div class="card-content">
+                            <h3>What's new in Android M for Developers?</h3>
+                            <div class="layout horizontal">
+                                <iron-image id="schedule-speaker-img" sizing="cover" src="http://devfest.gdg.org.ua/images/people/dawid_ostrowski.jpg"></iron-image>
+                                <div class="person-detail flex layout vertical center-center"> <span class="self-start" id="speaker-name">Takuo Suzuki, Google</span> </div>
+                            </div>
                         </div>
                     </paper-card>
-                  </div>
                 </div>
-             </div>  
-             <!--end of double-->                                                                             
-              <div id="time">
-                <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
-                <h2>4.45pm</h2>
-              </div>
-              <div id="schedule-card-detail-card">
-                <paper-card>
-                  <div class="card-content">
-                    <h3>Closing remarks</h3>
+                <div id="time">
+                    <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
+                    <h2>3.00pm</h2> </div>
+                <!--double-->
+                <div class="horizontal layout" id="schedule-flex">
+                    <div class="flex">
+                        <div id="schedule-card-detail-card">
+                            <paper-card>
+                                <div class="card-content">
+                                    <h3>Polymer Starter Kit</h3>
+                                    <div class="layout horizontal">
+                                        <iron-image id="schedule-speaker-img" sizing="cover" src="http://devfest.gdg.org.ua/images/people/dawid_ostrowski.jpg"></iron-image>
+                                        <div class="person-detail flex layout vertical center-center "> <span class="self-start" id="speaker-name">Dawid Ostrowski</span> </div>
+                                    </div>
+                                </div>
+                            </paper-card>
+                        </div>
                     </div>
-                </paper-card>
-              </div>
-
-              <div id="time">
-                <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
-                <h2>5.00pm</h2>
-              </div>
-              <div id="schedule-card-detail-card">
-                <paper-card>
-                  <div class="card-content">
-                    <h3>Breakout</h3>
+                    <div class="flex">
+                        <div id="schedule-card-detail-card">
+                            <paper-card>
+                                <div class="card-content">
+                                    <h3>VR & Google Cardboard</h3>
+                                    <div class="layout horizontal">
+                                        <iron-image id="schedule-speaker-img" sizing="cover" src="http://devfest.gdg.org.ua/images/people/dawid_ostrowski.jpg"></iron-image>
+                                        <div class="person-detail flex layout vertical center-center "> <span class="self-start" id="speaker-name">Dawid Ostrowski</span> </div>
+                                    </div>
+                                </div>
+                            </paper-card>
+                        </div>
                     </div>
-                </paper-card>
-              </div>              
+                </div>
+                <!--end of double-->
+                <div id="time">
+                    <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
+                    <h2>4.45pm</h2> </div>
+                <div id="schedule-card-detail-card">
+                    <paper-card>
+                        <div class="card-content">
+                            <h3>Closing remarks</h3> </div>
+                    </paper-card>
+                </div>
+                <div id="time">
+                    <iron-icon icon="device:access-time" id="icon-clock"></iron-icon>
+                    <h2>5.00pm</h2> </div>
+                <div id="schedule-card-detail-card">
+                    <paper-card>
+                        <div class="card-content">
+                            <h3>Breakout</h3> </div>
+                    </paper-card>
+                </div>
             </div>
         </div>
-  </template>
-
-
-
-
-
-
-
-  <script>
+    </template>
+    <script>
     (function() {
-      'use strict';
-      
-      Polymer({
-        is: 'my-schedule'
-
-      });
+        'use strict';
+        Polymer({
+            is: 'my-schedule'
+        });
     })();
-  </script>
-
+    </script>
 </dom-module>

@@ -1,131 +1,96 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/iron-media-query/iron-media-query.html">
-<link rel="import" href="../../bower_components/paper-drawer-panel/paper-drawer-panel.html">
-<link rel="import" href="../../bower_components/paper-menu/paper-menu.html">
-<link rel="import" href="../../bower_components/paper-item/paper-item.html">
-
 <dom-module id="my-toolbar">
 <style>
-  paper-drawer-panel{
-
-  }
-  #menu-button{
+#menu-button {
     padding: 16px;
     color: white;
     top: -100px;
-  }
-  #drawer-toolbar paper-toolbar{
+}
+#drawer-toolbar paper-toolbar {
     height: 168px;
-  }
-  paper-item a{
+}
+paper-item a {
     text-decoration: none;
     color: black;
-  }
-  #paper-tab{
+}
+#paper-tab {
     float: right;
     display: inline-block;
     margin-top: 6px;
-  }
-    #home-logo{
-position: relative;
+}
+#home-logo {
+    position: relative;
     top: 14px;
     margin: 14px 26px;
-  }
-  @media screen and (max-width: 640px){
-  #paper-tab{
-    display: none;
-  }    
-  #menu-button{
-    top: 0px;
-  }
-       #home-logo{
-      display: none;
+}
+@media screen and (max-width: 640px) {
+    #paper-tab {
+        display: none;
     }
-  }
+    #menu-button {
+        top: 0px;
+    }
+    #home-logo {
+        display: none;
+    }
+}
 </style>
-  <template>
-
-
-
-<!--   </paper-toolbar> -->
-  <paper-drawer-panel force-narrow>
-    <div drawer>
-      <paper-toolbar class="tall">
-        <div class="top title">Top Title</div>
-        <div class="middle title">Middle Title</div>
-        <div class="bottom title">Bottom Titles</div>
-      </paper-toolbar>
-        <paper-menu>
-          <paper-item >
-            <a data-route="home" href="/" class="center-center horizontal layout" paper-drawer-toggle>HOME</a> 
-          </paper-item>
-          <paper-item paper-drawer-toggle>
-            <a data-route="speaker" href="/speaker" class="center-center horizontal layout" paper-drawer-toggle>SPEAKER</a> 
-          </paper-item>
-          <paper-item paper-drawer-toggle>
-            <a data-route="schedule" href="/schedule" class="center-center horizontal layout" paper-drawer-toggle>SCHEDULE</a> 
-          </paper-item>
-          <paper-item paper-drawer-toggle>
-            <a data-route="register" href="/register" class="center-center horizontal layout" paper-drawer-toggle>REGISTER</a> 
-          </paper-item>                                                
-        </paper-menu>
-    </div>
-    <div main style="overflow-x:auto">
-      <a data-route="home" href="/" id="home-logo"><img src="http://devfest.gdg.org.ua/images/logo-white.svg" height="36px"></a>
-      <paper-icon-button icon="menu" paper-drawer-toggle id="menu-button"></paper-icon-button>
-      <div id="paper-tab">
-        <paper-tabs noink no-bar>          
-          <paper-tab>          
-            <a data-route="speaker" href="/speaker" class="center-center horizontal layout linknounderline">SPEAKER</a> 
-          </paper-tab>
-          <paper-tab>          
-            <a data-route="schedule" href="/schedule" class="center-center horizontal layout linknounderline">SCHEDULE</a> 
-          </paper-tab>            
-          <paper-tab>          
-            <a data-route="register" href="/register" class="center-center horizontal layout linknounderline">REGISTER</a> 
-          </paper-tab>
-        </paper-tabs>     
-      </div>
-      <my-awesome></my-awesome>
-      <div id="footer">
-
-        <div class="horizontal layout" id="footer-flex">
-            <div class="flex">
-              <h4>For visitors</h4>
-              <p>Google Developers</p>
-              <p>Code of Conduct</p>
+    <template>
+        <!--   </paper-toolbar> -->
+        <paper-drawer-panel force-narrow>
+            <div drawer>
+                <paper-toolbar class="tall">
+                    <div class="top title">Top Title</div>
+                    <div class="middle title">Middle Title</div>
+                    <div class="bottom title">Bottom Titles</div>
+                </paper-toolbar>
+                <paper-menu>
+                    <paper-item> <a data-route="home" href="/" class="center-center horizontal layout" paper-drawer-toggle>HOME</a> </paper-item>
+                    <paper-item paper-drawer-toggle> <a data-route="speaker" href="/speaker" class="center-center horizontal layout" paper-drawer-toggle>SPEAKER</a> </paper-item>
+                    <paper-item paper-drawer-toggle> <a data-route="schedule" href="/schedule" class="center-center horizontal layout" paper-drawer-toggle>SCHEDULE</a> </paper-item>
+                    <paper-item paper-drawer-toggle> <a data-route="register" href="/register" class="center-center horizontal layout" paper-drawer-toggle>REGISTER</a> </paper-item>
+                </paper-menu>
             </div>
-            <div class="flex">
-              <h4>For partners</h4>
-              <p>Media Kit</p>
-              <p>Donation</p>
+            <div main style="overflow-x:auto">
+                <a data-route="home" href="/" id="home-logo"><img src="http://devfest.gdg.org.ua/images/logo-white.svg" height="36px"> </a>
+                <paper-icon-button icon="menu" paper-drawer-toggle id="menu-button"></paper-icon-button>
+                <div id="paper-tab">
+                    <paper-tabs noink no-bar>
+                        <paper-tab> <a data-route="speaker" href="/speaker" class="center-center horizontal layout linknounderline">SPEAKER</a> </paper-tab>
+                        <paper-tab> <a data-route="schedule" href="/schedule" class="center-center horizontal layout linknounderline">SCHEDULE</a> </paper-tab>
+                        <paper-tab> <a data-route="register" href="/register" class="center-center horizontal layout linknounderline">REGISTER</a> </paper-tab>
+                    </paper-tabs>
+                </div>
+                <my-awesome></my-awesome>
+                <div id="footer">
+                    <div class="horizontal layout" id="footer-flex">
+                        <div class="flex">
+                            <h4>For visitors</h4>
+                            <p>Google Developers</p>
+                            <p>Code of Conduct</p>
+                        </div>
+                        <div class="flex">
+                            <h4>For partners</h4>
+                            <p>Media Kit</p>
+                            <p>Donation</p>
+                        </div>
+                        <div class="flex">
+                            <h4>Contact us</h4>
+                            <p>devfest@gdgkl.my</p>
+                        </div>
+                        <div class="flex"></div>
+                    </div>
+                    <p>© 2015. Designed and created by Henry Lim · GDG KL</p>
+                </div>
             </div>
-            <div class="flex">
-              <h4>Contact us</h4>
-              <p>devfest@gdgkl.my</p>
-            </div>
-            <div class="flex"></div>              
-        </div>
-        <p>© 2015. Designed and created by Henry Lim · GDG KL</p>
-      </div>        
-    </div>
-  </paper-drawer-panel>
-  
-  
-</template>
-
-
-
-
-  <script>
+        </paper-drawer-panel>
+    </template>
+    <script>
     (function() {
-      'use strict';
-      
-      Polymer({
-        is: 'my-toolbar'
-
-      });
+        'use strict';
+        Polymer({
+            is: 'my-toolbar'
+        });
     })();
-  </script>
-
+    </script>
 </dom-module>
