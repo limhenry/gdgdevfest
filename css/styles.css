@@ -87,6 +87,11 @@ a.style-scope.my-home{
     color: #5c5c5c;
     text-decoration: none;
 }
+
+#header-img{
+    height: 150px;
+}
+
 @media screen and (max-width: 640px) {
     #sandbox {
         padding: 16px;
@@ -110,5 +115,13 @@ a.style-scope.my-home{
     }
     #direction-card-paper {
         width: 100%
+    }
+
+    #fun{
+        margin: 0px;
+    }
+
+    #header-img{
+        height: 100px;
     }
 }

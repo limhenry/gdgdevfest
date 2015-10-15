@@ -1,14 +1,14 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <dom-module id="my-home">
     <style>
-        paper-button.fancy {
-            background: #F44336;
-            color: white;
-        }
+    paper-button.fancy {
+        background: #F44336;
+        color: white;
+    }
     </style>
     <template>
         <div id="header">
-            <div id="header-content"> <img src="https://developers.google.com/events/devfest/images/gdg-devfest-2015.svg" height="150px"> </div>
+            <div id="header-content"> <img id="header-img" src="/res/gdg-devfest-season.png"> </div>
         </div>
         <div id="content">
             <div id="event_desc">
@@ -28,13 +28,14 @@
                 </paper-card>
             </div>
             <div id="sandbox">
-                <h2>Fun</h2>
-                <p>Interactive zones on the second and third floors for you to play, explore, and collaborate with the latest from Google.</p>
+                <div class="flex" id="fun">
+                    <h2>Fun</h2>
+                    <p>Interactive zones on the second and third floors for you to play, explore, and collaborate with the latest from Google.</p>
+                </div>
                 <div class="horizontal layout" id="sandbox-flex">
                     <div class="flex">
                         <h4>Talks</h4>
-                        <p>Shorter talks in pop-up spaces in the sandbox,
-                            letting you hear directly from us about developing with our latest APIs and tools.
+                        <p>Shorter talks in pop-up spaces in the sandbox, letting you hear directly from us about developing with our latest APIs and tools.
                         </p>
                     </div>
                     <div class="flex">
@@ -56,7 +57,7 @@
                     <paper-card class="flex-2 style-scope map-block x-scope paper-card-0" aria-label="" id="direction-card-paper">
                         <div class="card-content">
                             <h1>Location</h1>
-                            <p>Malaysian Global Innovation & Creativity Centre
+                            <p>Malaysian Global Innovation &amp; Creativity Centre (MaGIC)
                                 <br>Block 3730, Persiaran Apec, 63000 Cyberjaya, Selangor, Malaysia</p>
                         </div>
                         <div class="card-actions">
