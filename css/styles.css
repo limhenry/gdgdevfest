@@ -20,7 +20,7 @@ paper-toolbar.paper-toolbar-0 {
     margin: 0 auto;
     max-width: 960px;
     color: white;
-    margin-bottom: -48px;
+    /*margin-bottom: -48px;*/
 }
 #content {
     background-color: #455A64;
