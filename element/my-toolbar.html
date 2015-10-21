@@ -21,8 +21,16 @@ paper-menu a {
 #paper-tab {
     float: right;
     display: inline-block;
-    margin-top: 6px;
+    margin: 8px 8px;
+    width: 360px;
 }
+
+#logo-div{
+    float: left;
+    display: inline-block;
+    margin: 8px 16px;
+}
+
 #home-logo {
     position: relative;
     top: 14px;
@@ -56,8 +64,8 @@ paper-menu a {
                     <a data-route="register" href="/register" class="center-center horizontal layout" paper-drawer-toggle>REGISTER</a> 
                 </paper-menu>
             </div>
-            <div main style="overflow-x:auto">
-                <a data-route="home" href="/" id="home-logo"><img src="https://1-ps.googleusercontent.com/xk/3D6ucRnjoa3hq556zmREI8yTIg/s.devfestkl.appspot.com/devfestkl.appspot.com/img/2013/xlogo-gdgkl.png.pagespeed.ic.wMaX5Hk89PYYX47smLF7.png" height="36px"> </a>
+            <div main style="overflow-x:auto;">
+                <a data-route="home" href="/" id="home-logo"><div id="logo-div"><img src="https://1-ps.googleusercontent.com/xk/3D6ucRnjoa3hq556zmREI8yTIg/s.devfestkl.appspot.com/devfestkl.appspot.com/img/2013/xlogo-gdgkl.png.pagespeed.ic.wMaX5Hk89PYYX47smLF7.png" height="36px"></div> </a>
                 <paper-icon-button icon="menu" paper-drawer-toggle id="menu-button"></paper-icon-button>
                 <div id="paper-tab">
                     <paper-tabs noink no-bar>
