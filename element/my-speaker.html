@@ -1,6 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <dom-module id="my-speaker">
-<style>
+    <style>
     h1 {
         font-weight: 200;
         font-size: 42px;
@@ -8,18 +8,23 @@
         bottom: 64px;
         color: white;
     }
+    
     #header {
         position: relative;
         height: 220px;
     }
+    
     paper-card {
         width: 300px;
         margin: 12px;
         top: -108px;
+        line-height: 24px;
     }
+    
     paper-card.card-content {
         padding: 16px 22px;
     }
+    
     #speaker-card {
         justify-content: center;
         background-color: #F2F2F2;
@@ -33,26 +38,30 @@
         -webkit-flex-wrap: wrap;
         flex-wrap: wrap;
     }
+    
     #speaker-name {
         font-weight: 600;
         margin: 0;
         font-size: 22px;
     }
+    
     #speaker-post {
         margin: 0;
         line-height: 24px;
         font-weight: 300;
     }
+    
     #speaker-desc {
         font-size: 16px;
     }
+    
     @media screen and (max-width: 640px) {
         #speaker-card.my-speaker {
             padding: 12px 0px;
         }
         paper-card.my-speaker {
             top: 0;
-            width: 250px;
+            width: calc(99% - 16px);
         }
         #header.my-speaker {
             height: 130px;
@@ -67,12 +76,82 @@
             padding: 12px 20px;
         }
     }
-</style>
+    </style>
     <template>
         <div id="header">
             <h1>Speakers</h1> </div>
         <div id="speaker-card">
-            <h3>To Be Announced Soon</h3>
+            <paper-card image="../res/vin_lim.jpg">
+                <div class="card-content">
+                    <h3 id="speaker-name">Vin Lim | Polymer</h3>
+                    <h3 id="speaker-post"><i>Community Manager GDG George Town</i></h3>
+                    <p id="speaker-desc"> Vin is the co-founder &amp; CEO of Green Room - leading mobile apps &amp; web development company, with portfolio covering major international &amp; local brands. Vin is self-thought programmer with focus on web technologies with enthusiasm in building tech community led to the founding of Startup Penang with fellow startups in the region in 2011. In DevFest KL 2015, Vin will guide along the usage of Polymer elements and Bower scaffolding using Chrome Dev Editor to produce responsive yet versatile, production-ready web applications supported in multiple browsers.
+                    </p>
+                </div>
+            </paper-card>
+            <paper-card image="../res/sc_kim.jpg">
+                <div class="card-content">
+                    <h3 id="speaker-name">SC Kim | Cardboard </h3>
+                    <h3 id="speaker-post"><i>Android &amp; Web Developer</i></h3>
+                    <p id="speaker-desc">SC is a techie who had his fair share of experience in developing Android and VR applications while pursuing his Master of Research in The National University of Malaysia (UKM). He is also a Malaysian-representative alumni from Google Student Ambassadors SEA 2014-2015.  In the workshop, SC will be guiding how to build simple interactive VR Game using Unity Editor, MonoDevelop and Cardboard SDK with your Android device and Google Cardboard.</p>
+                </div>
+            </paper-card>
+            <paper-card image="http://devfest2015.gdggeorgetown.com/images/speaker-unnamed.jpg">
+                <div class="card-content">
+                    <h3 id="speaker-name">Speaker #3</h3>
+                    <h3 id="speaker-post"><i>Coming Soon</i></h3>
+                    <p id="speaker-desc">Coming Soon</p>
+                </div>
+            </paper-card>
+            <paper-card image="http://devfest2015.gdggeorgetown.com/images/speaker-unnamed.jpg">
+                <div class="card-content">
+                    <h3 id="speaker-name">Speaker #4</h3>
+                    <h3 id="speaker-post"><i>Coming Soon</i></h3>
+                    <p id="speaker-desc">Coming Soon</p>
+                </div>
+            </paper-card>
+            <paper-card image="http://devfest2015.gdggeorgetown.com/images/speaker-unnamed.jpg">
+                <div class="card-content">
+                    <h3 id="speaker-name">Speaker #5</h3>
+                    <h3 id="speaker-post"><i>Coming Soon</i></h3>
+                    <p id="speaker-desc">Coming Soon</p>
+                </div>
+            </paper-card>
+            <paper-card image="http://devfest2015.gdggeorgetown.com/images/speaker-unnamed.jpg">
+                <div class="card-content">
+                    <h3 id="speaker-name">Speaker #6</h3>
+                    <h3 id="speaker-post"><i>Coming Soon</i></h3>
+                    <p id="speaker-desc">Coming Soon</p>
+                </div>
+            </paper-card>
+            <paper-card image="http://devfest2015.gdggeorgetown.com/images/speaker-unnamed.jpg">
+                <div class="card-content">
+                    <h3 id="speaker-name">Speaker #7</h3>
+                    <h3 id="speaker-post"><i>Coming Soon</i></h3>
+                    <p id="speaker-desc">Coming Soon</p>
+                </div>
+            </paper-card>
+            <paper-card image="http://devfest2015.gdggeorgetown.com/images/speaker-unnamed.jpg">
+                <div class="card-content">
+                    <h3 id="speaker-name">Speaker #8</h3>
+                    <h3 id="speaker-post"><i>Coming Soon</i></h3>
+                    <p id="speaker-desc">Coming Soon</p>
+                </div>
+            </paper-card>
+            <paper-card image="http://devfest2015.gdggeorgetown.com/images/speaker-unnamed.jpg">
+                <div class="card-content">
+                    <h3 id="speaker-name">Speaker #9</h3>
+                    <h3 id="speaker-post"><i>Coming Soon</i></h3>
+                    <p id="speaker-desc">Coming Soon</p>
+                </div>
+            </paper-card>
+            <paper-card image="http://devfest2015.gdggeorgetown.com/images/speaker-unnamed.jpg">
+                <div class="card-content">
+                    <h3 id="speaker-name">Speaker #10</h3>
+                    <h3 id="speaker-post"><i>Coming Soon</i></h3>
+                    <p id="speaker-desc">Coming Soon</p>
+                </div>
+            </paper-card>
         </div>
     </template>
     <script>
