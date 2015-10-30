@@ -4,7 +4,7 @@
 
     // Middleware
     function scrollToTop(ctx, next) {
-      // app.scrollPageToTop();
+      document.body.scrollTop = 0;
       next();
     }
 
