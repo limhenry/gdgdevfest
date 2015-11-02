@@ -14,57 +14,34 @@ h1 {
 }
 #schedule-card {
     background-color: #F2F2F2;
-    padding: 24px;
+    padding: 24px 24px 48px 24px;
+    -webkit-transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);    
 }
-#schedule-speaker-img {
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
+paper-card{
+    display: block;
+    margin: 0 auto;    
+    width: 80%;
+    max-width: 800px;
 }
-#schedule-card-detail {
-    max-width: 860px;
-    margin: auto;
-}
-#schedule-card-detail-card {
-    margin: 8px;
-}
-#schedule-card-detail-card paper-card {
-    width: 100%;
-}
-.card-content h3 {
-    font-weight: 300;
-    font-size: 24px;
-}
-.person-detail {
-    height: 30px;
-    margin: 0 12px;
-    margin-left: 12px;
-}
-.flex {
-    margin: 0;
-}
-#speaker-name {
-    margin-left: 12px;
-}
-#schedule-flex {
-    margin: -8px 0;
+paper-card .card-actions{
+    font-weight: 400;
     display: flex;
 }
-#time.my-schedule {
-    margin: 38px 0px 8px 12px;
-    color: #656565;
+#event-program{
+    font-weight: normal;
+    color: rgb(33, 33, 33);
 }
-#time {
-    margin: 8px 6px 0 0;
+#event-detail{
+    flex: 2;
 }
-#icon-clock {
-    top: -2px;
+#event-time{
+    flex: 1;
 }
-#time h2 {
-    display: inline;
-    font-weight: 300;
-    margin-left: 6px;
-    font-size: 20px;
+paper-card h3{
+    padding: 24px 24px 0px 24px;
+    font-weight: 400;
+    font-size: 1.5em;
 }
 @media screen and (max-width: 640px) {
     #schedule-flex {
@@ -80,13 +57,172 @@ h1 {
         margin: 18px 12px;
         font-size: 36px;
     }
+    #schedule-card.my-schedule{
+        padding: 12px 0 36px 0;
+    }
+    paper-card.my-schedule .card-actions.my-schedule{
+        flex-direction: column-reverse;
+    }
+    #event-topic{
+        margin-top: -8px;
+    }
+    #event-time{
+        margin-top: -4px;
+    }
+    #event-detail.my-schedule{
+        margin-left: 0px;
+    }
+    paper-card.my-schedule{
+        width: 90%;
+    }
 }
 </style>
     <template>
         <div id="header">
             <h1>Schedule</h1> </div>
-        <div id="schedule-card" style="text-align:center;">
-            <h3>To Be Announced Soon</h3>
+        <div id="schedule-card">
+            <paper-card>
+                <h3>8.00 AM</h3>
+                <div class="card-actions">
+                    <p id="event-time">8.00AM - 9.00AM</p>
+                    <div id="event-detail">
+                        <p id="event-program">Registration</p>
+                    </div>
+                </div>
+            </paper-card>
+            <paper-card>
+                <h3>9.00 AM</h3>
+                <div class="card-actions">
+                    <p id="event-time">9.00AM - 9.10AM</p>
+                    <div id="event-detail">
+                        <p id="event-program">DevFest Opening Remarks  | Nazrul</p>
+                        <p id="event-topic">Keynote</p>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <p id="event-time">9.10AM - 10.00AM</p>
+                    <div id="event-detail">
+                        <p id="event-program">Opening Keynote | Prashant</p>
+                        <p id="event-topic">DevFest</p>
+                    </div>
+                </div>                
+            </paper-card>
+            <paper-card>
+                <h3>10.00 AM</h3>
+                <div class="card-actions">
+                    <p id="event-time">10.00AM - 10.30AM</p>
+                    <div id="event-detail">
+                        <p id="event-program">Morning Break</p>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <p id="event-time">10.30AM - 11.30AM</p>
+                    <div id="event-detail">
+                        <p id="event-program">Web | Vin Lim</p>
+                        <p id="event-topic">Polymer</p>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <p id="event-time">10.30AM - 12.00PM</p>
+                    <div id="event-detail">
+                        <p id="event-program">Firebase | Ibun</p>
+                        <p id="event-topic">Firebase</p>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <p id="event-time">10.30AM - 12.00PM</p>
+                    <div id="event-detail">
+                        <p id="event-program">Android | Andhie</p>
+                        <p id="event-topic">Design Library</p>
+                    </div>
+                </div>                                                   
+            </paper-card>    
+            <paper-card>
+                <h3>11.00 AM</h3>
+                <div class="card-actions">
+                    <p id="event-time">11.30AM - 12.30AM</p>
+                    <div id="event-detail">
+                        <p id="event-program">Android | Sidiq</p>
+                        <p id="event-topic">App Indexing and deep link</p>
+                    </div>
+                </div>              
+            </paper-card>                                              
+            <paper-card>
+                <h3>12.00 PM</h3>
+                <div class="card-actions">
+                    <p id="event-time">12.30PM - 1.00PM</p>
+                    <div id="event-detail">
+                        <p id="event-program">Lunch</p>
+
+                    </div>
+                </div>              
+            </paper-card>
+            <paper-card>
+                <h3>1.00 PM</h3>
+                <div class="card-actions">
+                    <p id="event-time">1.00PM - 2.00PM</p>
+                    <div id="event-detail">
+                        <p id="event-program">Android | Sidiq</p>
+                        <p id="event-topic">App Indexing and deep link</p>
+                    </div>
+                </div> 
+                <div class="card-actions">
+                    <p id="event-time">1.00PM - 2.30PM</p>
+                    <div id="event-detail">
+                        <p id="event-program">Web | Vin Lim</p>
+                        <p id="event-topic">Polymer</p>
+                    </div>
+                </div>   
+                <div class="card-actions">
+                    <p id="event-time">1.00PM - 2.30PM</p>
+                    <div id="event-detail">
+                        <p id="event-program">Unity 3D  | SC Kim</p>
+                        <p id="event-topic">Cardboard</p>
+                    </div>
+                </div>                                                 
+            </paper-card>
+            <paper-card>
+                <h3>2.00 PM</h3>
+                <div class="card-actions">
+                    <p id="event-time">2.00PM - 2.15PM</p>
+                    <div id="event-detail">
+                        <p id="event-program">Break</p>
+                    </div>
+                </div>       
+                <div class="card-actions">
+                    <p id="event-time">2.15PM - 3.15PM</p>
+                    <div id="event-detail">
+                        <p id="event-program">User Experience | Shiva</p>
+                        <p id="event-topic">Material Design & UX</p>
+                    </div>
+                </div> 
+                <div class="card-actions">
+                    <p id="event-time">2.35PM - 4.00PM</p>
+                    <div id="event-detail">
+                        <p id="event-program">Android | Sidiq</p>
+                        <p id="event-topic">Marshmallow (On Material Design, App Permission Model, and new APIs)</p>
+                    </div>
+                </div>                                         
+            </paper-card>
+            <paper-card>
+                <h3>3.00 PM</h3>
+                <div class="card-actions">
+                    <p id="event-time">3.15PM - 4.00PM</p>
+                    <div id="event-detail">
+                        <p id="event-program">App Publish | Ibun</p>
+                        <p id="event-topic">App Monetization Strategy</p>
+                    </div>
+                </div>              
+            </paper-card>
+            <paper-card>
+                <h3>4.00 PM</h3>
+                <div class="card-actions">
+                    <p id="event-time">4.00PM - 4.15PM</p>
+                    <div id="event-detail">
+                        <p id="event-program">Closing</p>
+                    </div>
+                </div>              
+            </paper-card>                                                              
         </div>
     </template>
     <script>
@@ -98,3 +234,5 @@ h1 {
     })();
     </script>
 </dom-module>
+
+
